@@ -28,6 +28,10 @@ class Player():
         self.thrededreq("pause")
         print("Toggle play")
 
+    def fullscreenon(self):
+        self.thrededreq('fullscreen on')
+    def fullscreenoff(self):
+        self.thrededreq('fullscreen off')
 
     def next(self):
         if not self.is_initiated:
@@ -35,6 +39,14 @@ class Player():
             return
         self.thrededreq("next")
         print("Next")
+        pass
+
+    def pause(self):
+        # if not self.is_initiated:
+        #     self.toggle_play()
+        #     return
+        self.thrededreq("pause")
+        print("pause")
         pass
 
     def prev(self):
@@ -124,6 +136,9 @@ class Player():
 
 #'vlc --intf rc --rc-host 127.0.0.1:44500' you need to run the vlc player from command line to allo controlling it via TCP
 player=Player()
-player.toggle_play()
+# player.toggle_play()
 #player.next()
 #player.prev()
+player.pause()
+# player.fullscreenon()
+player.fullscreenoff()
