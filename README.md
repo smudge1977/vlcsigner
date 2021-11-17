@@ -4,9 +4,12 @@ Control VLC instances for signage type usages
 
 ## Setup 
 
+Inital starting of vlc
+[Running GUI apps at runtime](https://forums.raspberrypi.com/viewtopic.php?t=193860)
+
 to be done in a package eventually!
 
-Turn off low power warning etc
+Turn off low power warning etc (dosen't seem to work)
 '''
 sudo vi /boot/config.txt
 avoid_warnings=1

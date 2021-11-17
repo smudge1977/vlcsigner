@@ -8,6 +8,8 @@ import threading
 log = logging.getLogger('vlcsign')
 
 class Player():
+    # Initial code and awareness of the telnet interface from:
+    # https://stackoverflow.com/questions/56103533/how-can-i-control-vlc-media-player-through-a-python-scripte
     def __init__(self):
         self.is_initiated = False
         self.SEEK_TIME = 20
@@ -134,11 +136,22 @@ class Player():
     def thrededreq(self, msg):
         threading.Thread(target=self.req, args=(msg,)).start()
 
+    def fullblack(self):
+        seq = '''
+        clear
+        add /opt/vlcsigner/gray.png
+        fullscreen on
+        '''
+        self.thrededreq(seq)
+        # self.threadreq("")
+        # self.threadreq("")
+
 #'vlc --intf rc --rc-host 127.0.0.1:44500' you need to run the vlc player from command line to allo controlling it via TCP
 player=Player()
 # player.toggle_play()
 #player.next()
 #player.prev()
-player.pause()
+# player.pause()
 # player.fullscreenon()
-player.fullscreenoff()
+# player.fullscreenoff()
+player.fullblack()
