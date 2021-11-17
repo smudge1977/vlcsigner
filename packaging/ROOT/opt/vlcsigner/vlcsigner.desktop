@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=VLC Player
+Comment=Launch VLC for signer
+NoDisplay=false
+Exec=/usr/bin/vlcsigner -e /home/pi/startKivy.sh
+NotShowIn=GNOME;KDE;XFCE;
