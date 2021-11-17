@@ -22,18 +22,18 @@ sym link files in packaging to where they will end up!
 [reference](https://pimylifeup.com/raspberry-pi-disable-screen-blanking/)
 
 These commands do need to be run from teh X enviroment
-'''
+```
 xset s noblank
 xset -dpms
 # xset -s off    does not seem to work
-'''
+```
 
 
 
 
 ## VLC RC interface help
 
-
+```
 VLC media player 3.0.12 Vetinari
 Command Line Interface initialized. Type `help' for help.
 > help
@@ -103,4 +103,4 @@ Command Line Interface initialized. Type `help' for help.
 | quit . . . . . . . .  quit VLC (or logout if in a socket connection)
 | shutdown . . . . . . . . . . . . . . . . . . . . . . .  shutdown VLC
 +----[ end of help ]
-> 
+> ```
