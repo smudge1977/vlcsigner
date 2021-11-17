@@ -10,12 +10,12 @@ Inital starting of vlc
 to be done in a package eventually!
 
 Turn off low power warning etc (dosen't seem to work)
-'''
+```
 sudo vi /boot/config.txt
 avoid_warnings=1
-'''
+```
 
-sym link files in packaging to where they will end up!
+sym link files in packaging to where they will end up!<br>
 #TODO: helper script to do this when working on packaging stuff?
 
 ## Screen blanking
