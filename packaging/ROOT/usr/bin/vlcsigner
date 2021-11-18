@@ -22,6 +22,10 @@ for i in "$@"; do
   case $i in
     run|--run)
         echo "run"
+        pcmanfm --set-wallpaper /opt/vlcsigner/black.png 
+        xset s noblank
+        xset -dpms
+        xset -s off
         echo "Lanching vlc ready for connections" >> /var/log/vlcsigner/vlc.log 2>&1
         date >> /var/log/vlcsigner/vlc.log 2>&1
         killall vlc
@@ -50,6 +54,11 @@ for i in "$@"; do
         ;;
     playing|--playing)
         echo -e 'playlist\nquit' | netcat localhost ${VLC_PORT} -i 1 | grep "*"
+        exit 0
+        ;;
+    play|--play)
+        echo playing $2
+        playthis $2
         exit 0
         ;;
     *)
