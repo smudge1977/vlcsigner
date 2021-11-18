@@ -22,9 +22,11 @@ for i in "$@"; do
   case $i in
     run|--run)
         echo "run"
-        echo "Lanching vlc ready for connections"
+        echo "Lanching vlc ready for connections" >> /var/log/vlcsigner/vlc.log 2>&1
+        date >> /var/log/vlcsigner/vlc.log 2>&1
         killall vlc
-        vlc --intf rc --rc-host 127.0.0.1:44500 > /var/log/vlcsigner/vlc.log 2>&1
+        # Issue #1 --vout mmal_vout fix issue switch content and dropping full screen
+        vlc --vout mmal_vout --intf rc --rc-host 127.0.0.1:44500 >> /var/log/vlcsigner/vlc.log 2>&1
         exit 0
         ;;
     holding|--holding)
