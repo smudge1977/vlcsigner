@@ -1,15 +1,21 @@
 # vlcsigner
 Control VLC instances for signage type usages
 
-
+## VLC Show playing file
+Turn on VLC thing that tells you name of file playing
+```
+/home/pi/.config/vlc/vlcrc
+osd=0
+#osd=1
+```
 ## Setup 
 
 Inital starting of vlc
 [Running GUI apps at runtime](https://forums.raspberrypi.com/viewtopic.php?t=193860)
 
-to be done in a package eventually!
+to be done in a package eventually! but at the moment I sym link the files from my git repo.
 
-Turn off low power warning etc (dosen't seem to work)
+Turn off low power warning etc (dosen't seem to work)?
 ```
 sudo vi /boot/config.txt
 avoid_warnings=1

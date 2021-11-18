@@ -1,3 +1,63 @@
 #!/usr/bin/bash
-# Launch VLC Player
-vlc --intf rc --rc-host 127.0.0.1:44500
+
+VLC_PORT=44500
+
+function help {
+    echo vlcsigner options
+      echo "run         - put vlc in to listening mode on port ${VLC_PORT}"
+      echo "kill        - kill running vlc's"
+      echo "holding     - displat holding slide"
+      echo "telnet      - make telnet connection to interact"
+      exit 1
+}
+
+function playthis {
+    echo playing $1
+    # netcat - i is delay in seconds between commands to make more reliable 
+    echo -e "clear\nadd ${1}\nfullscreen on\nloop on\nquit" | netcat localhost ${VLC_PORT} -i 1
+    echo Returned from netcat: $?
+}
+
+for i in "$@"; do
+  case $i in
+    run|--run)
+        echo "run"
+        echo "Lanching vlc ready for connections"
+        killall vlc
+        vlc --intf rc --rc-host 127.0.0.1:44500 > /var/log/vlcsigner/vlc.log 2>&1
+        exit 0
+        ;;
+    holding|--holding)
+        echo "holding"
+        playthis /opt/vlcsigner/gray.png
+        #echo -e 'clear\nadd /opt/vlcsigner/gray.png\nfullscreen on\nloop on\nquit' | netcat localhost ${VLC_PORT}
+        echo "Returned $?"
+        exit 0
+        ;;
+    content|--content)
+        echo "content"
+        playthis /home/pi/git/vlcsigner/content
+        # echo -e 'clear\nadd /home/pi/git/vlcsigner/content\nfullscreen on\nloop on\nquit' | netcat localhost ${VLC_PORT}
+        echo "Returned $?"
+        exit 0
+        ;;
+    telnet|--telnet|--i|interactive|--interactive)
+        echo "Interactive"
+        telnet localhost ${VLC_PORT}
+        exit 0
+        ;;
+    playing|--playing)
+        echo -e 'playlist\nquit' | netcat localhost ${VLC_PORT} -i 1 | grep "*"
+        exit 0
+        ;;
+    *)
+      # unknown option
+      help
+      ;;
+  esac
+done
+
+# Can get here cause of the case loop thing so show help!
+help
+
+
