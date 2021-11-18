@@ -145,13 +145,15 @@ class Player():
         self.thrededreq(seq)
         # self.threadreq("")
         # self.threadreq("")
-
+    def _delete_(self):
+        self.thrededreq('quit')
+        
 #'vlc --intf rc --rc-host 127.0.0.1:44500' you need to run the vlc player from command line to allo controlling it via TCP
 player=Player()
-# player.toggle_play()
+player.toggle_play()
 #player.next()
 #player.prev()
 # player.pause()
 # player.fullscreenon()
 # player.fullscreenoff()
-player.fullblack()
+# player.fullblack()
