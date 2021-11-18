@@ -10,11 +10,13 @@ osd=0
 ```
 ## Setup 
 
-Inital starting of vlc
+
+# Inital starting of vlc
 [Running GUI apps at runtime](https://forums.raspberrypi.com/viewtopic.php?t=193860)
 
 to be done in a package eventually! but at the moment I sym link the files from my git repo.
 
+# TODO:
 Turn off low power warning etc (dosen't seem to work)?
 ```
 sudo vi /boot/config.txt
@@ -24,7 +26,10 @@ avoid_warnings=1
 sym link files in packaging to where they will end up!<br>
 #TODO: helper script to do this when working on packaging stuff?
 
-## Screen blanking
+
+## These are done in the run section
+
+### Screen blanking
 [reference](https://pimylifeup.com/raspberry-pi-disable-screen-blanking/)
 
 These commands do need to be run from teh X enviroment
@@ -34,6 +39,10 @@ xset -dpms
 # xset -s off    does not seem to work
 ```
 
+### Black wallpaper
+Thsi is done in the run section of the launch script.
+pcmanfm --set-wallpaper yourfile.jpg
+pcmanfm --set-wallpaper /opt/vlcsigner/black.png 
 
 
 
