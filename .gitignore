@@ -130,3 +130,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+vplayer_0.0.1_armhf.buildinfo
+vplayer_0.0.1_armhf.changes
+vplayer_0.0.1_armhf.deb
+vplayer-0/debian/debhelper-build-stamp
+vplayer-0/debian/files
+vplayer-0/debian/vplayer.substvars
+vplayer-0/debian/.debhelper/generated/vplayer/installed-by-dh_installdocs
+vplayer-0/debian/vplayer/DEBIAN/control
+vplayer-0/debian/vplayer/DEBIAN/md5sums
+vplayer-0/debian/vplayer/usr/share/doc/vplayer/changelog.gz
+vplayer-0/debian/vplayer/usr/share/doc/vplayer/copyright
+vplayer-0/debian/vplayer/usr/share/doc/vplayer/README.Debian
