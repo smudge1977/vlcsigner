@@ -1,0 +1,9 @@
+Source: vplayer
+Maintainer: KMarston <keith@sneconsulting.co.uk>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.7
+
+Package: vplayer
+Architecture: all
+Depends: omxplayer
+Description: wraper to omxplayer

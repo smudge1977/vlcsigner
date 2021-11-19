@@ -1,3 +1,17 @@
+# VPLAYER omxplayer
+
+use omx to player different scenes at time of day
+
+## systemd services
+
+
+
+## vplayer 
+
+Will be a script that launches 'scenes' these can then be called from starting systemd jobs and removed by stopping the job
+
+
+
 # TODO etc
 
 debian.control
