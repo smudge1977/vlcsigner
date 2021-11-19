@@ -7,3 +7,4 @@ Exec=/usr/bin/vlcsigner --run
 NotShowIn=GNOME;KDE;XFCE;
 
 # link to /etc/xdg/autostart
+# ln -s /etc/xdg/autostart/vlcsigner.desktop /opt/vlcsigner/vlcsigner.desktop
