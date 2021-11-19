@@ -19,6 +19,7 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
+    # remove anything in crontab
     ;;
 
     failed-upgrade)
