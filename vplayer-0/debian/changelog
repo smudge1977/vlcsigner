@@ -1,5 +1,8 @@
-vplayer (0) unstable; urgency=medium
+vplayer (0.0.1) unstable; urgency-medium
 
-  * Initial Release.
+  [ SnE ]
+  * Initial poc.
 
- -- unknown <pi@unknown>  Fri, 19 Nov 2021 20:44:27 +0000
+ -- KMarston <keith@sneconsulting.co.uk> Fri, 19 Nov 2021 00:00:00 +0000
+    
+

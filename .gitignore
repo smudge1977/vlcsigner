@@ -16,7 +16,8 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
++vplayer-0/lib
+# lib/
 lib64/
 parts/
 sdist/
