@@ -1,0 +1,5 @@
+vplayer/
+source/
+.debhelper/
+
+*.debhelper

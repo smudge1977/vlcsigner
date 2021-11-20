@@ -1,1 +1,14 @@
-./opt/vplayer/video1.mp4 ./opt/vplayer
+
+opt/vplayer/video1.mp4
+opt/vplayer/video2.mp4
+opt/vplayer/holding.mp4
+opt/vplayer/black.png
+opt/vplayer/gray.png
+opt/vplayer/video1.mp4
+opt/vplayer/video2.mp4
+opt/vplayer/holding.mp4
+opt/vplayer/black.png
+opt/vplayer/gray.png
+lib/systemd/system/omxplayer2.service
+lib/systemd/system/omxplayer1.service
+lib/systemd/system/omxplayer0.service

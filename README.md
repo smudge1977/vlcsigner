@@ -2,6 +2,14 @@
 
 use omx to player different scenes at time of day
 
+## PI User setup bits
+
+Set wallpaper to black.png
+```
+pcmanfm --set-wallpaper yourfile.jpg
+```
+
+
 ## systemd services
 
 
